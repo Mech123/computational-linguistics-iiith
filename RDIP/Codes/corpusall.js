@@ -26,6 +26,10 @@ x1=x.split(" ");
 	document.getElementById("demo3").innerHTML=""
 	document.getElementById("demo5").innerHTML=""
 	document.getElementById("demo4").innerHTML=""
+	document.getElementById("demo6").innerHTML=""
+
+
+
 	document.getElementById("b3").style.visibility="hidden";
 	document.getElementById('b4').style.visibility="hidden"
 	count=0
@@ -139,8 +143,75 @@ function reset()
 	  	document.getElementById('button'+i).style.visibility="visible";
 	  document.getElementById('demo4').innerHTML=""
 	  document.getElementById('demo5').innerHTML=""
+	  document.getElementById('demo6').innerHTML=""
 	  document.getElementById('b3').style.visibility="hidden"
 	   document.getElementById('b4').style.visibility="hidden" 
+
+}
+}
+
+ function check()
+{
+
+  var x=String(document.getElementById("demo5").innerHTML).replace(/\s+$/, '');
+  c=0;
+  p=0
+  if(document.getElementById("eng").selected)
+  {
+  for(i=0;i<10;i++)
+  {
+    for(j=0;j<main[i].length;j++)
+    {
+
+      if(x==main[i][j])
+      {
+
+        c++;
+
+      }
+    }
+  }
+
+if(c==1)
+{
+      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
+
+}
+
+}
+
+ else if(document.getElementById("hin").selected)
+  {
+  for(i=0;i<7;i++)
+  {
+    for(j=0;j<main1[i].length;j++)
+    {
+
+      if(x==main1[i][j])
+      {
+
+        p++;
+
+      }
+    }
+  }
+
+
+if(p==1)
+{
+      document.getElementById("demo6").innerHTML="<span style='color:green;font-size:30px'>Right answer!!!</span>"
+
+}
+else
+{
+      document.getElementById("demo6").innerHTML="<span style='color:red;font-size:30px'>Wrong answer!!!</span>"
+
+}
 
 }
 }
